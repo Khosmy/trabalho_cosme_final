@@ -1,0 +1,19 @@
+__author__ = 'cosme.cardoso'
+from django.conf.urls import patterns, include, url
+from django.contrib import admin
+
+urlpatterns = patterns('',
+    # Examples:
+    # url(r'^$', 'trabalho_cosme.views.home', name='home'),
+    # url(r'^blog/', include('blog.urls')),
+	url(r'^$', 'classes.views.index'),
+   	url(r'^admin/', include(admin.site.urls)),
+    	url(r'^models/Cliente/$', cadastraCliente(), name='cadastra_Cliente'),
+        url(r'^models/Carro/$', cadastraCarro(), name='cadastra_Carro'),
+        url(r'^models/Registro/$', cadastraRegistro(), name='cadastra_Registro'),
+        url(r'^models/Vaga/$', cadastraVaga(), name='cadastra_Vaga'),
+        url(r'^models/Cobra/$', cadastraCobra(), name='cadastra_Cobra'),
+        url(r'^models/Estaciona/$', cadastraEstaciona(), name='cadastra_Estaciona'),
+  	
+)
+

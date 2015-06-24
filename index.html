@@ -1,0 +1,44 @@
+
+<html>
+
+    <head>
+    </head>
+    <body>
+    </body>
+    <form method= "post" >
+        {%  csrf_token  %}
+        {{  form  }}
+        <input  type= "submit"  value= "Submit"  />
+    </form>
+
+</html>
+<form method="post">
+   {% csrf_token %}
+   {{ form }}
+   <input type="submit" value="Salvar" />
+</form>
+
+{% for y in ListaClientes %}
+    <p>
+        <a href="{% url 'edita_cliente' y.id %}">{{ y.Nome }}</a>
+    </p>
+{% endfor %}
+
+{% for y in ListaCarros %}
+    <p>
+        <a href="{% url 'edita_carro' y.id %}">{{ y.Nome }}</a>
+    </p>
+{% endfor %}
+
+{% for y in ListaVaga %}
+    <p>
+        <a href="{% url 'edita_vaga' y.id %}">{{ y.Nome }}</a>
+    </p>
+{% endfor %}
+
+{% for y in ListaAlugar %}
+    <p>
+        <a href="{% url 'edita_alugar' y.id %}">{{ y.Nome }}</a>
+    </p>
+{% endfor %}
+

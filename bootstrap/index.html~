@@ -1,0 +1,15 @@
+__author__ = 'cosme.cardoso'
+
+<html>
+
+    <head>
+    </head>
+    <body>
+    </body>
+    <form  action= "/Cosme/"  method= "post" >
+        {%  csrf_token  %}
+        {{  form  }}
+        <input  type= "submit"  value= "Submit"  />
+    </form>
+
+</html>
